@@ -1,0 +1,77 @@
+.box-home{
+    text-align: center;
+    margin-top: 180px;
+    color: #ffffff;
+}
+
+
+.box-score{
+    width: 50%;
+    height: auto;
+    border: #45c329 4.4px solid;
+    box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    -webkit-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    -moz-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    background-color: #001422;
+    margin: 40px auto;
+    padding: 10px;
+    text-align: center;
+}
+.h1-home{
+    font-size: 45px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.p-home{
+    margin-top: 10px;
+}
+
+.h2-home{
+    text-align: start;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
+
+.scope{
+    width: 55px;
+    margin: 5% 30px 50px 30px;
+    border:4px solid #45c329;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.scope:hover{
+    transform: scale(1.1);
+}
+
+.img1-home{
+    cursor: url(../../Images/Scope/scope1.png) 14.8 14.8, auto;
+}
+.img2-home{
+    cursor: url(../../Images/Scope/scope2.png) 14.8 14.8, auto;
+}
+.img3-home{
+    cursor: url(../../Images/Scope/scope3.png) 14.8 14.8, auto;
+}
+.img4-home{
+    cursor: url(../../Images/Scope/scope4.png) 14.8 14.8, auto;
+}
+.img5-home{
+    cursor: url(../../Images/Scope/scope5.png) 14.8 14.8, auto;
+}
+.img6-home{
+    cursor: url(../../Images/Scope/scope6.png) 14.8 14.8, auto;
+}
+.img7-home{
+    cursor: url(../../Images/Scope/scope7.png) 14.8 14.8, auto;
+}
+.img8-home{
+    cursor: url(../../Images/Scope/scope8.png) 14.8 14.8, auto;
+}
+@media only screen and (max-width: 768px){
+    .box-score{
+        width: 70%;
+    }
+}

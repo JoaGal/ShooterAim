@@ -1,0 +1,94 @@
+.box-games{
+    margin-top: 12%;
+    display: flex;
+    justify-content: center;
+}
+
+.box-game{
+    width: 270px;
+    height: 300px;
+    border: #45c329 4.4px solid;
+    box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    -webkit-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    -moz-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    background-color: #001422;
+    padding: 10px;
+    margin: 0 50px;
+    color: #ffffff;
+    text-align: center;
+    z-index: 10;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.box-game:hover{
+    margin-top: -20px;
+}
+
+.icon-game{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+.bal1-game{
+    width: 50px;
+    height: 50px;
+    background: #c3295c;
+    margin: 40px 0 0 45px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 24px 2px #c3295cb6;
+    -webkit-box-shadow: 0px 0px 24px 2px #c3295cb6;
+    -moz-box-shadow: 0px 0px 24px 2px #c3295cb6;
+}
+.bal2-game{
+    width: 50px;
+    height: 50px;
+    background: #c3295c;
+    margin: 5px 0 0 145px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 24px 2px #c3295cb6;
+    -webkit-box-shadow: 0px 0px 24px 2px #c3295cb6;
+    -moz-box-shadow: 0px 0px 24px 2px #c3295cb6;
+}
+
+.bal3-game{
+    width: 15px;
+    height: 15px;
+    background: #c3295c;
+    margin: 35%  auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 24px 2px #c3295cb6;
+    -webkit-box-shadow: 0px 0px 24px 2px #c3295cb6;
+    -moz-box-shadow: 0px 0px 24px 2px #c3295cb6;
+}
+.bal4-game{
+    width: 50px;
+    height: 50px;
+    background: #c32929;
+    margin: 5px 0 0 145px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 24px 2px #c32929b6;
+    -webkit-box-shadow: 0px 0px 24px 2px #c32929b6;
+    -moz-box-shadow: 0px 0px 24px 2px #c32929b6;
+}
+
+.h3-game{
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 768px){
+    .box-games{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 120px;
+    }
+    
+    .box-game{
+        margin: 50px 0 0 0;
+    }
+    
+    .box-game:hover{
+        margin-top: 0px;
+    }
+}

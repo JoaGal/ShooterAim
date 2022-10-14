@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Navbar } from "./Components/Navbar/Navbar";
+import { Contact } from "./Pages/Contact/Contact";
+import { DoubleShot } from "./Pages/Games/DoubleShot/DoubleShot";
+import { Games } from "./Pages/Games/Games";
+import { Presicion } from "./Pages/Games/Presicion/Presicion";
+import { Home } from "./Pages/Home/Home";
+import {Challenge} from "./Pages/Games/Challenge/Challenge.js";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <BrowserRouter>
 
-export default App;
+    <Navbar />
+    
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/games/presicion" element={<Presicion/>} />
+        <Route path="/games/doubleshot" element={<DoubleShot/>} />
+        <Route path="/games/challenge" element={<Challenge/>} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
