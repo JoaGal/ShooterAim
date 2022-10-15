@@ -40,8 +40,8 @@ export const Presicion = () => {
             animation: `${
               onOf && !lifeStatus && `animate ${time}s linear infinite`
             }`,
-            top: `${top}px`,
-            left: `${left}px`,
+            top: `${top}%`,
+            left: `${left}%`,
           }}
           onClick={(e)=> point(e)}
         ></span>

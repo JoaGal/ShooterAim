@@ -12,7 +12,8 @@
     box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
     -webkit-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
     -moz-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
-    
+    padding-right: 22px;
+    padding-bottom: 24px;
 }
 
 .bal-doubleshot{
@@ -21,4 +22,15 @@
     display: block;
     border-radius: 50%;
     position: relative;
+}
+
+@media only screen and (max-width: 768px){
+    .container-doubleshot{
+        margin: 22% 0 0 0;
+       
+    }
+    .box-doubleshot{
+        width: 80%;
+        height: 400px;   
+    }
 }

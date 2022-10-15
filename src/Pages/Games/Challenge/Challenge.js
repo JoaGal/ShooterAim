@@ -51,8 +51,8 @@ export const Challenge = () => {
             animation: `${
               onOf && !lifeStatus && `animate ${time}s linear infinite`
             }`,
-            top: `${top}px`,
-            left: `${left}px`,
+            top: `${top}%`,
+            left: `${left}%`,
           }}
           onClick={(e) => point(e)}
         ></span>
@@ -63,8 +63,8 @@ export const Challenge = () => {
             animation: `${
               onOf && !lifeStatus && `bad ${time}s linear infinite`
             }`,
-            top: `${top2}px`,
-            left: `${left2}px`,
+            top: `${top2}%`,
+            left: `${left2}%`,
           }}
           onClick={(e) => point(e)}
         ></span>

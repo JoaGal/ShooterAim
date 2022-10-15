@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 export const useMoveBall = () => {
-  const [left, setLeft] = useState(Math.random() * (772 - 4) + 4);
-  const [top, setTop] = useState(Math.random() * (572 - 4) + 4);
-  const [top2, setTop2] = useState(Math.random() * (572 - 4) + 4);
-  const [left2, setLeft2] = useState(Math.random() * (772 - 4) + 4);
+  const [left, setLeft] = useState(Math.random() * 100);
+  const [top, setTop] = useState(Math.random() * 100);
+  const [top2, setTop2] = useState(Math.random() * 100);
+  const [left2, setLeft2] = useState(Math.random() * 100);
   const [onOf, setOnOf] = useState(false);
   const [time, setTime] = useState(1);
   const [lifeStatus, setLifeStatus] = useState(false);
@@ -17,11 +17,11 @@ export const useMoveBall = () => {
     let interval = null;
     if (onOf) {
       interval = setInterval(() => {
-        setTop(Math.random() * (572 - 4) + 4);
-        setLeft(Math.random() * (772 - 4) + 4);
+        setTop(Math.random() * 100);
+        setLeft(Math.random() * 100);
         if (game === "doubleShot" || game === "challenge" ) {
-          setTop2(Math.random() * (550 - 4) + 4);
-          setLeft2(Math.random() * (770 - 4) + 4);
+          setTop2(Math.random() * 100);
+          setLeft2(Math.random() * 100);
         }
       }, (time * 1000));
     } else {

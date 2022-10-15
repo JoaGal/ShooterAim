@@ -51,8 +51,8 @@ export const DoubleShot = () => {
             animation: `${
               onOf && !lifeStatus && ballOpacity !== 1 && `animate ${time}s linear infinite`
             }`,
-            top: `${top}px`,
-            left: `${left}px`,
+            top: `${top}%`,
+            left: `${left}%`,
           }}
           onClick={(e) => point(e, 1)}
         ></span>
@@ -62,8 +62,8 @@ export const DoubleShot = () => {
             animation: `${
               onOf && !lifeStatus && ballOpacity !== 2 && `animate ${time}s linear infinite`
             }`,
-            top: `${top2}px`,
-            left: `${left2}px`,
+            top: `${top2}%`,
+            left: `${left2}%`,
           }}
           onClick={(e) => point(e, 2)}
         ></span>

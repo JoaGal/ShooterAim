@@ -82,6 +82,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 120px;
+        margin-bottom: 50px;
     }
     
     .box-game{
@@ -89,6 +90,6 @@
     }
     
     .box-game:hover{
-        margin-top: 0px;
+        margin-top: 0;
     }
 }
