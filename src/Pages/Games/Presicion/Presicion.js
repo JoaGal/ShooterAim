@@ -2,7 +2,7 @@ import React from "react";
 import { useMoveBall } from "../../../Hooks/useMoveBall";
 import "./Presicion.css";
 import { BsFillHeartFill } from "react-icons/bs";
-import { VscDebugRestart } from "react-icons/vsc";
+import { Start } from "../../../Components/Start/Start";
 
 export const Presicion = () => {
   const {
@@ -20,13 +20,8 @@ export const Presicion = () => {
 
   return (
     <div className="container-presicion">
-      {onOf === false || life === 0 ? (
-        <div className="container-play">
-          <button className="button-play" onClick={start}>
-            {life === 3 ? "Play" : <VscDebugRestart className="ico-play"/>}
-          </button>
-        </div>
-      ): null}
+      {(onOf === false || life === 0) &&
+       <Start play={start}/>}
       <div className="box-points">{points}</div>
       <div className={`box-presicion ${window.localStorage.getItem("Scope")}`}>
         <div className="life-container">

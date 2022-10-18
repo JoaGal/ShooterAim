@@ -2,7 +2,7 @@ import React from "react";
 import "./DoubleShot.css";
 import { useMoveBall } from "../../../Hooks/useMoveBall";
 import { BsFillHeartFill } from "react-icons/bs";
-import { VscDebugRestart } from "react-icons/vsc";
+import { Start } from "../../../Components/Start/Start";
 
 export const DoubleShot = () => {
   const {
@@ -29,13 +29,8 @@ export const DoubleShot = () => {
 
   return (
     <div className="container-doubleshot">
-      {onOf === false || life === 0 ? (
-        <div className="container-play">
-          <button className="button-play" onClick={startDoubleShot}>
-            {life === 3 ? "Play" : <VscDebugRestart className="ico-play" />}
-          </button>
-        </div>
-      ) : null}
+      {(onOf === false || life === 0) &&
+       <Start play={startDoubleShot}/>}
       <div className="box-points">
         {Number.isInteger(points) ? points : points - 0.5}
       </div>

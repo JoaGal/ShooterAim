@@ -46,8 +46,6 @@ export const useMoveBall = () => {
     }
   }, [top]);
 
-  console.log(game)
-
   const start = () => {
     setOnOf(true);
     if (life !== 3) {
