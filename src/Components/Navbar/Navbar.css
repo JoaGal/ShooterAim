@@ -45,6 +45,7 @@
 .nav-li {
   border-radius: 8px;
   transition: 0.3s ease background-color;
+  list-style: none;
 }
 
 .nav-link {
