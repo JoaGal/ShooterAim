@@ -4,19 +4,6 @@
     display: flex;
 }
 
-
-@keyframes animates {
-    0%{
-        color: #ffffff;
-        transform: rotate(180deg);
-    }
-    100%{
-        color: #ffffff34;
-        box-shadow: none;
-        transform: rotate(-180deg);
-    }
-}
-
 .box-presicion{
     background-color: #001422;
     width: 800px;
