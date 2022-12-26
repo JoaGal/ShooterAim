@@ -1,0 +1,21 @@
+.box-points{
+    background-color: #001422;
+    width: 50px;
+    height: 50px;
+    border: #45c329 4.4px solid;
+    box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    -webkit-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    -moz-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    margin: 0 20px 0 20px;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 24px;
+    color: #c3295c;
+}
+
+@media only screen and (max-width: 768px){
+    .box-points{
+        position: absolute;
+        margin: -60px 0 0 0;
+    }
+}

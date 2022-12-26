@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useMoveBall } from "../../../Hooks/useMoveBall";
 import "../AllGames.css";
 import { BsFillHeartFill } from "react-icons/bs";
@@ -7,7 +7,7 @@ import { Speed } from "../../../Components/Speed/Speed";
 import { Point } from "../../../Components/Point/Point";
 import { Ball } from "../../../Components/Ball/Ball";
 
-export const Presicion = () => {
+export const MultiShoot = () => {
   const {
     onOf,
     time,
@@ -17,6 +17,8 @@ export const Presicion = () => {
     start,
     point,
     points,
+    ball,
+    ballTouch
   } = useMoveBall();
 
   return (
@@ -25,14 +27,24 @@ export const Presicion = () => {
       <Point point={points} />
       <div className={`box ${window.localStorage.getItem("Scope")}`}>
         <div className="box-transparent">
-        <div className="life-container">
-          {life === 3 && <BsFillHeartFill className="life-ico" />}
-          {life >= 2 && <BsFillHeartFill className="life-ico" />}
-          {life >= 1 && <BsFillHeartFill className="life-ico" />}
-        </div>
-        {onOf && !lifeStatus && (
-          <Ball time={time} point={()=> point("ballGood")} size={12}/>
-        )}
+          <div className="life-container">
+            {life === 3 && <BsFillHeartFill className="life-ico" />}
+            {life >= 2 && <BsFillHeartFill className="life-ico" />}
+            {life >= 1 && <BsFillHeartFill className="life-ico" />}
+          </div>
+          {onOf &&
+            !lifeStatus &&
+            ball.map((i) => {
+               return (
+                (!ballTouch.includes(i)) && <Ball
+                    time={time}
+                    point={() => point("ballMultiShoot", i)}
+                    size={20}
+                    key={i}
+                    ballTouch={ballTouch.length}
+                  />
+                );   
+            })}
         </div>
       </div>
       <Speed setTimes={setTime} />

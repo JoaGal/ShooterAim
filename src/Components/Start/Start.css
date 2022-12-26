@@ -46,3 +46,10 @@
         transform: rotate(360deg);
     }
 }
+
+@media only screen and (max-width: 768px){
+    .container-play{
+        width: 80%;
+        height: 400px;
+    }
+}

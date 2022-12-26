@@ -1,10 +1,10 @@
-.container-doubleshot{
+.container{
     margin: 7% 0 0 0;
     justify-content: center;
     display: flex;
 }
 
-.box-doubleshot{
+.box{
     background-color: #001422;
     width: 800px;
     height: 600px;
@@ -12,25 +12,41 @@
     box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
     -webkit-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
     -moz-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
-    padding-right: 22px;
-    padding-bottom: 24px;
 }
 
-.bal-doubleshot{
-    width: 20px;
-    height: 20px;
-    display: block;
-    border-radius: 50%;
-    position: relative;
+.box-transparent{
+    position: absolute;
+    background-color: transparent;
+    width: 770px;
+    height: 570px;
+}
+
+.life-container{
+    color: #ffffffd0;
+    font-size: 30px;
+    width: 120px;
+    position: absolute;
+}
+
+.life-container:hover{
+   color: transparent;
+}
+
+.life-ico{
+    margin: 5px;
 }
 
 @media only screen and (max-width: 768px){
-    .container-doubleshot{
+    .container{
         margin: 22% 0 0 0;
        
     }
-    .box-doubleshot{
+    .box{
         width: 80%;
         height: 400px;   
+    }
+    .box-transparent{
+        height: 370px;
+        width: 72.3%;
     }
 }

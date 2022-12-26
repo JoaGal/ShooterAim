@@ -9,7 +9,7 @@ export const Home = () => {
 
   return (
     <div className={`box-home ${window.localStorage.getItem("Scope")}`}>
-      <div className="box-score">
+      <div className="box-score animate__animated animate__bounceInDown">
         <h1 className="h1-home">Let's go noob</h1>
         <p className="p-home">
           Practice your aim for shooter games, so you can rank up and they won't

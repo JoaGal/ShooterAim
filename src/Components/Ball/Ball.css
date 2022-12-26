@@ -1,0 +1,66 @@
+.ball{
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+} 
+
+@keyframes animate {
+    0%{
+        background: #c3295c00;
+        box-shadow:none;
+        transform: scale(0.7);
+    }
+    90%{
+        background: #c3295c ;
+        transform: scale(1);
+        box-shadow: 0px 0px 24px 2px #c3295cb6;
+        -webkit-box-shadow: 0px 0px 24px 2px #c3295cb6;
+        -moz-box-shadow: 0px 0px 24px 2px #c3295cb6;
+    }
+    
+}
+
+@keyframes red{
+    0%{
+        background: #c3295c00;
+        box-shadow:none;
+        transform: scale(0.7);
+    }
+    90%{
+        background: #c32929 ;
+        transform: scale(1);
+        box-shadow: 0px 0px 24px 2px #c32929b6;
+        -webkit-box-shadow: 0px 0px 24px 2px #c32929b6;
+        -moz-box-shadow: 0px 0px 24px 2px #c32929b6;
+    }
+}
+
+@keyframes blue{
+    0%{
+        background: #2568cc00;
+        box-shadow:none;
+        transform: scale(0.7);
+    }
+    90%{
+        background: #2568cc ;
+        transform: scale(1);
+        box-shadow: 0px 0px 24px 2px #2568ccb6;
+        -webkit-box-shadow: 0px 0px 24px 2px #2568ccb6;
+        -moz-box-shadow: 0px 0px 24px 2px #2568ccb6;
+    }
+}
+
+@keyframes yellow{
+    0%{
+        background: #dbb60f00;
+        box-shadow:none;
+        transform: scale(0.7);
+    }
+    90%{
+        background: #dbb60f ;
+        transform: scale(1);
+        box-shadow: 0px 0px 24px 2px #dbb60fb6;
+        -webkit-box-shadow: 0px 0px 24px 2px #dbb60fb6;
+        -moz-box-shadow: 0px 0px 24px 2px #dbb60fb6;
+    }
+}

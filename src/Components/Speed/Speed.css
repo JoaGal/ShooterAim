@@ -1,0 +1,27 @@
+.input-speed{
+    color: #45c329;
+    background-color: #001422;
+    border: #45c329 4.4px solid;
+    box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    -webkit-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    -moz-box-shadow: 0px 0px 24px 2px rgba(69,195,41,0.71);
+    width: 80px;
+    height: 30px;
+    letter-spacing: 1px;
+    margin: 0 0 0 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.input-speed::placeholder{
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px){
+    .input-speed{
+        display: block;
+        position: absolute;
+        margin: 420px 0 0 0;
+    }
+}

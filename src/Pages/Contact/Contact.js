@@ -6,7 +6,7 @@ import Img from "../../Images/Yo2.jpeg"
 
 export const Contact = () => {
   return (
-    <div className="container-contact">
+    <div className="container-contact animate__animated animate__bounceInDown">
       <h1 className="h1-contact">Joaquin Galdeano</h1>
       <div className="box-contact">
         <img src={Img} className="img-contact"/>

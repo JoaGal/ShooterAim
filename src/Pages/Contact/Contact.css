@@ -33,4 +33,9 @@
     font-size: 70px;
     margin: 10px;
     color: #45c329;
+    transition: 1s;
+}
+
+.ico-contact:hover{
+    transform: scale(1.1);
 }

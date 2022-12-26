@@ -7,7 +7,7 @@ import { Speed } from "../../../Components/Speed/Speed";
 import { Point } from "../../../Components/Point/Point";
 import { Ball } from "../../../Components/Ball/Ball";
 
-export const Challenge = () => {
+export const DoubleShoot = () => {
   const {
     onOf,
     time,
@@ -17,6 +17,7 @@ export const Challenge = () => {
     start,
     point,
     points,
+    ballTouch
   } = useMoveBall();
 
   return (
@@ -30,16 +31,11 @@ export const Challenge = () => {
           {life >= 2 && <BsFillHeartFill className="life-ico" />}
           {life >= 1 && <BsFillHeartFill className="life-ico" />}
         </div>
-        {onOf && !lifeStatus && (
-          <Ball time={time} point={() => point("ballGood")} size={20} />
+        {onOf && !lifeStatus && !ballTouch.includes(0) && (
+          <Ball time={time} point={()=> point("ballDoubleshoot", 0)} size={20} ballTouch={ballTouch.length}/>
         )}
-        {onOf && !lifeStatus && (
-          <Ball
-            time={time}
-            point={() => point("ballBad")}
-            size={20}
-            color={"red"}
-          />
+        {onOf && !lifeStatus && !ballTouch.includes(1) &&(
+          <Ball time={time} point={()=> point("ballDoubleshoot", 1)} size={20} ballTouch={ballTouch.length}/>
         )}
         </div>
       </div>

@@ -2,11 +2,13 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { Contact } from "./Pages/Contact/Contact";
-import { DoubleShot } from "./Pages/Games/DoubleShot/DoubleShot";
 import { Games } from "./Pages/Games/Games";
 import { Presicion } from "./Pages/Games/Presicion/Presicion";
 import { Home } from "./Pages/Home/Home";
 import {Challenge} from "./Pages/Games/Challenge/Challenge.js";
+import { Diana } from "./Pages/Games/Diana/Diana";
+import { DoubleShoot } from "./Pages/Games/DoubleShoot/DoubleShoot";
+import { MultiShoot } from "./Pages/Games/MultiShoot/MultiShoot";
 
 export const App = () => {
   return (
@@ -19,8 +21,10 @@ export const App = () => {
         <Route path="/games" element={<Games />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/games/presicion" element={<Presicion/>} />
-        <Route path="/games/doubleshot" element={<DoubleShot/>} />
+        <Route path="/games/doubleshoot" element={<DoubleShoot/>} />
         <Route path="/games/challenge" element={<Challenge/>} />
+        <Route path="/games/diana" element ={<Diana/>}/>
+        <Route path="/games/multishoot" element={<MultiShoot/>}/>
       </Routes>
     </BrowserRouter>
   );

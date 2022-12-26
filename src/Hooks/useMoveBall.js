@@ -1,50 +1,41 @@
 import { useEffect, useState } from "react";
 
 export const useMoveBall = () => {
-  const [left, setLeft] = useState(Math.random() * 100);
-  const [top, setTop] = useState(Math.random() * 100);
-  const [top2, setTop2] = useState(Math.random() * 100);
-  const [left2, setLeft2] = useState(Math.random() * 100);
   const [onOf, setOnOf] = useState(false);
   const [time, setTime] = useState(1);
   const [lifeStatus, setLifeStatus] = useState(false);
   const [life, setLife] = useState(3);
   const [points, setPoints] = useState(0);
-  const [game, setGame] = useState("");
-  const [ballOpacity, setBallOpacity ] = useState(0)
+  const [moveBall, setMoveBall] = useState(true);
+  const [ballTouch, setBallTouch] = useState([]);
+  const ball = Array.from({length: points + 1}, (v, i) => i);
   
   useEffect(() => {
     let interval = null;
     if (onOf) {
       interval = setInterval(() => {
-        setTop(Math.random() * 100);
-        setLeft(Math.random() * 100);
-        if (game === "doubleShot" || game === "challenge" ) {
-          setTop2(Math.random() * 100);
-          setLeft2(Math.random() * 100);
-        }
-      }, (time * 1000));
+        setMoveBall((moveBall) => !moveBall);
+      }, time * 1000);
     } else {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
   }, [onOf]);
 
-
   useEffect(() => {
     if (!lifeStatus && onOf && life > 0) {
       setLife(life - 1);
+      setBallTouch([]);
       if (!Number.isInteger(points)) {
-        setBallOpacity(0);
         setPoints(points - 0.5);
       }
     } else if (life < 1) {
       setOnOf(false);
     } else {
       setLifeStatus(false);
-      setBallOpacity(0);
+      setBallTouch([]);
     }
-  }, [top]);
+  }, [moveBall]);
 
   const start = () => {
     setOnOf(true);
@@ -57,29 +48,43 @@ export const useMoveBall = () => {
     }
   };
 
-  const point = (e, number) => {
-    if ((e.target.className.includes("bal-presicion") || e.target.id.includes("ball-good")) && !lifeStatus) {
+  const point = (name, i) => {
+    if (name === "ballGood" && !lifeStatus) {
       setPoints(points + 1);
       setLifeStatus(true);
-    } else if (e.target.className.includes("bal-doubleshot") && ballOpacity !== number) {
-      setPoints(points + 0.5);
-      setBallOpacity(number)
-      console.log(number)
-      if (!Number.isInteger(points)) {
+    } else if (name === "ballDoubleshoot") {
+      const newBall = [...ballTouch, i]
+      setBallTouch(newBall);
+      if (ballTouch.length === 1) {
         setLifeStatus(true);
+        setPoints(points + 1);
+        setBallTouch([]);
       }
-    }else if (e.target.id.includes("ball-bad")) {
+    } else if (name === "ballDiana") {
+      setLifeStatus(true);
+      if (i === 0) {
+        setPoints(points + 1);
+      } else if (i === 1) {
+        setPoints(points + 2);
+      } else{
+        setPoints(points + 3);
+      }
+    }else if (name === "ballBad") {
       setPoints(points - 1);
       setLifeStatus(true);
-      setLife(life - 1)
+      setLife(life - 1);
+    }else if (name === "ballMultiShoot") {
+      const newBall = [...ballTouch, i]
+      setBallTouch(newBall);
+      if (ballTouch.length === points) {
+        setLifeStatus(true);
+        setPoints(points + 1);
+        setBallTouch([]);
+      }
     }
   };
 
   return {
-    top,
-    left,
-    left2,
-    top2,
     onOf,
     time,
     setTime,
@@ -88,7 +93,7 @@ export const useMoveBall = () => {
     start,
     point,
     points,
-    setGame,
-    ballOpacity
+    ball,
+    ballTouch
   };
 };
