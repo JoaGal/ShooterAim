@@ -9,6 +9,7 @@ import {Challenge} from "./Pages/Games/Challenge/Challenge.js";
 import { Diana } from "./Pages/Games/Diana/Diana";
 import { DoubleShoot } from "./Pages/Games/DoubleShoot/DoubleShoot";
 import { MultiShoot } from "./Pages/Games/MultiShoot/MultiShoot";
+import { Extreme } from "./Pages/Games/Extreme/Extreme";
 
 export const App = () => {
   return (
@@ -25,6 +26,7 @@ export const App = () => {
         <Route path="/games/challenge" element={<Challenge/>} />
         <Route path="/games/diana" element ={<Diana/>}/>
         <Route path="/games/multishoot" element={<MultiShoot/>}/>
+        <Route path="/games/extreme" element={<Extreme/>}/>
       </Routes>
     </BrowserRouter>
   );

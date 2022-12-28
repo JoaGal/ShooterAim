@@ -131,6 +131,37 @@
     -moz-box-shadow: 0px 0px 24px 2px #c3295cb6;
 }
 
+.bal10-game {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: auto;
+    border-radius: 50%;
+    background: #c3295c;
+    box-shadow: 0px 0px 24px 2px #c3295cb6;
+    -webkit-box-shadow: 0px 0px 24px 2px #c3295cb6;
+    -moz-box-shadow: 0px 0px 24px 2px #c3295cb6;
+}
+
+.icon-up{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin:auto;
+    margin-top: 15%;
+}
+.icon-down{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin:auto;
+}
+
+.icon-side{
+    width: 40px;
+    height: 40px; 
+}
+
 .h3-game {
     margin-top: 30px;
     letter-spacing: 2px;

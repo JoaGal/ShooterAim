@@ -1,8 +1,8 @@
 import React from "react";
 import "./Games.css";
 import { ImArrowDownRight2 } from "react-icons/im";
+import { IoIosArrowUp, IoIosArrowBack, IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { Ball } from "../../Components/Ball/Ball";
 
 export const Games = () => {
   return (
@@ -42,6 +42,16 @@ export const Games = () => {
           <div className="bal8-game"></div>
           <div className="bal9-game"></div>
           <div className="bal9-game"></div>
+        </div>
+      </Link>
+      <Link to="/games/extreme">
+        <div className="box-game">
+          <h3 className="h3-game">Extreme</h3>
+          <IoIosArrowUp className="icon-up"/>
+          <IoIosArrowBack className="icon-side"/>
+          <div className="bal10-game"></div>
+          <IoIosArrowForward className="icon-side"/>
+          <IoIosArrowDown className="icon-down"/>
         </div>
       </Link>
     </div>
